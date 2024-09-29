@@ -1,0 +1,110 @@
+.main-content .Trips-Container{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+.main-content .Trips-Container .trip-box{
+    display: grid;
+    height: 100px;
+    width: 300px;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.411);
+}
+
+.main-content .Trips-Container .trip-box ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content .Trips-Container .trip-box ul li{
+    width: 130px;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content .Trips-Container .trip-box ul:nth-child(2) li:nth-child(2) a{
+    font-size: 10px;
+}
+
+.main-content .Trips-Container .trip-box:nth-child(1) ul:nth-child(1) li:nth-child(2) span{
+    padding: 7px;
+    border-radius: 25px;
+    background: #FF030354;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50px;
+    color: #D80000;
+}
+
+.main-content .Trips-Container .trip-box:nth-child(1) ul:nth-child(1) li:nth-child(2) span i{
+    background-color: #D80000;
+    border-radius: 50%;
+    height: 10px;
+    padding: 5px;
+}
+
+.main-content .Trips-Container .trip-box:nth-child(2) ul:nth-child(1) li:nth-child(2) span{
+    padding: 7px;
+    border-radius: 25px;
+    background: #030DFF54;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50px;
+    color: #0034BA;
+}
+
+.main-content .Trips-Container .trip-box:nth-child(2) ul:nth-child(1) li:nth-child(2) span i{
+    background-color: #0034BA;
+    border-radius: 50%;
+    height: 10px;
+    padding: 5px;
+}
+
+.main-content .Trips-Container .trip-box:nth-child(3) ul:nth-child(1) li:nth-child(2) span{
+    padding: 7px;
+    border-radius: 25px;
+    background: #00FF1A54;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50px;
+    color: #00780C;
+}
+
+.main-content .Trips-Container .trip-box:nth-child(3) ul:nth-child(1) li:nth-child(2) span i{
+    background-color: #00780C;
+    border-radius: 50%;
+    height: 10px;
+    padding: 5px;
+}
+
+.main-content .Trips-Container .trip-box:nth-child(4){
+    width: 960px;
+    height: 300PX;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+}
+
+.main-content .Trips-Container .trip-box:nth-child(4) .first-box{
+    box-shadow: 0px 3px 0px rgba(189, 184, 184, 0.411);
+    font-weight: 500;
+    font-size: 15px;
+    margin: 10px;
+}
+
+.main-content .Trips-Container .trip-box:nth-child(4) .second-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

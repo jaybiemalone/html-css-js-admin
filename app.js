@@ -1,0 +1,111 @@
+const toggleButton = document.getElementById('toggle-btn')
+const sidebar = document.getElementById('sidebar')
+
+function toggleSidebar(){
+    sidebar.classList.toggle('close')
+}
+
+function toggleSubMenu(button){
+    button.nextElementSibling.classList.toggle('show')
+    button.classList.toggle('rotate')
+}
+
+let data = [
+    {id: 1, driver:"sigma", client:"sigbin",email:"sigbin@gmail.com",from:"bukid",to:"quezon",hours:"4hrs",amount:"2500",tip:"20",status:"pending"},
+    {id: 2, driver:"salsalani", client:"sinalin",email:"sinalin@gmail.com",from:"manila",to:"dubay",hours:"5days",amount:"3500",tip:"20",status:"pending"},
+    {id: 3, driver:"wally", client:"bold",email:"bold-ni-wally@gmail.com",from:"manila",to:"GMA",hours:"3hrs",amount:"3500",tip:"150",status:"accepted"},
+    {id: 4, driver:"vic-soto", client:"ryza",email:"dumilim@gmail.com",from:"luzon",to:"GMA",hours:"3hrs",amount:"3500",tip:"200",status:"accepted"}
+]
+
+function readALL(){
+    localStorage.setItem("object", JSON.stringify(data));
+    var tabledata = document.querySelector(".data_table");
+
+    var object = localStorage.getItem('object');
+    var objectdata = JSON.parse(object);
+    var elements = "";
+
+    objectdata.map(record =>(
+        elements += `<tr>
+        <td>${record.driver}</td>
+        <td>${record.client}</td>
+        <td>${record.email}</td>
+        <td>${record.from}</td>
+        <td>${record.to}</td>
+        <td>${record.hours}</td>
+        <td>${record.amount}</td>
+        <td>${record.tip}</td>
+        <td>${record.status}</td>
+        <td>
+            <button class="edit" onclick={edit(${record.id})}>Edit</button>
+            <button class="delete" onclick={delet(${record.id})}>Delete</button>
+        </td>
+        </tr>`
+    ))
+
+    tabledata.innerHTML = elements;
+}
+
+function delet(id){
+    data.splice(id, 1);
+    readALL();
+}
+
+function create(){
+    document.querySelector(".create-form").style.display = "block";
+    document.querySelector(".add-div").style.display = "none";
+}
+
+function add(){
+    var driver = document.querySelector(".driver").value;
+    var client = document.querySelector(".client").value;
+    var email = document.querySelector(".email").value;
+    var from = document.querySelector(".from").value;
+    var to = document.querySelector(".to").value;
+    var hours = document.querySelector(".hours").value;
+    var amount = document.querySelector(".amount").value;
+    var tip = document.querySelector(".tip").value;
+    var status = document.querySelector(".status").value;
+
+    var newObj = {id: 5, driver: driver, client: client, email: email, from: from, to: to, hours: hours, amount: amount, tip: tip, status: status};
+    data.push(newObj);
+
+    document.querySelector(".create-form").style.display = "none";
+    document.querySelector(".add-div").style.display = "block";
+
+    readALL();
+}
+
+function edit(id){
+    document.querySelector('.update-form').style.display = "block";
+    var obj = data.find(rec => rec.id === id);
+    document.querySelector('.udriver').value = obj.driver;
+    document.querySelector('.uclient').value = obj.client;
+    document.querySelector('.uemail').value = obj.email;
+    document.querySelector('.ufrom').value = obj.from;
+    document.querySelector('.uto').value = obj.to;
+    document.querySelector('.uhours').value = obj.hours;
+    document.querySelector('.uamount').value = obj.amount;
+    document.querySelector('.utip').value = obj.tip;
+    document.querySelector('.ustatus').value = obj.status;
+    document.querySelector('.id').value = obj.id;
+}
+
+function update(){
+    var id = parseInt(document.querySelector('.id').value);
+    var driver = document.querySelector('.udriver').value;
+    var client = document.querySelector('.uclient').value;
+    var email = document.querySelector('.uemail').value;
+    var from = document.querySelector('.ufrom').value;
+    var to = document.querySelector('uto').value;
+    var hours = document.querySelector('.uhours').value;
+    var amount = document.querySelector('.uamount').value;
+    var tip = document.querySelector('.utip').value;
+    var status = document.querySelector('.ustatus').value;
+
+    var index = data.findIndex(rec => rec.id === id);
+    data[index] = {id, driver, client, email, from, to, hours, amount, tip, status};
+
+    document.querySelector('.update-form').style.display = "block";
+    readALL();
+}

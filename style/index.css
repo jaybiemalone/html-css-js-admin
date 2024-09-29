@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+@import url(dashboard.css);
+@import url(sidebar.css);
+@import url(navbar.css);
+@import url(trips.css);
+@import url(upcoming.css);
+@import url(triphistory.css);
+@import url(crud-trips_history.css);
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Lexend", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    color: white;
+}
+
+.main-content{
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    height: 100vh;
+    background-color: #E1E1E1;
+    box-sizing: border-box;
+    background-color: rgb(219 234 254);
+}
+

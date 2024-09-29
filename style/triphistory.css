@@ -1,0 +1,95 @@
+.main-content .triphistory-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content .triphistory-container .history-box{
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    width: 1050px;
+    height: 500px;
+    background-color: white;
+}
+
+.main-content .triphistory-container .history-box .top-box{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.288);
+    color: black;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    justify-content: space-between;
+}
+
+/* .main-content .triphistory-container .history-box .top-box a button{
+    border: none;
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    margin-right: 20px;
+    background-color: #0046FA;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+} */
+
+.main-content .triphistory-container .history-box .bottom-box{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    color: black;
+    position: relative;
+}
+.main-content .triphistory-container .history-box .bottom-box form{
+    padding: 15px;
+}
+
+.main-content .triphistory-container .history-box .bottom-box form input{
+    border: none;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.411);
+    border-radius: 5px;
+    height: 25px;
+    width: 180px;
+    margin: 5px;
+    outline: none;
+}
+
+.main-content .triphistory-container .history-box .bottom-box form button{
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #0046FA;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.main-content .triphistory-container .history-box .bottom-box form button:hover{
+    opacity: 50%;
+}
+
+.main-content .triphistory-container .history-box .bottom-box .add-div button{
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #0046FA;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+.create-form, .update-form{
+    display: none;
+}
+
+.main-content .triphistory-container .history-box .bottom-box table{
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+}

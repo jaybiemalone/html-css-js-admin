@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin.Movers.com</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body onload="readALL()">
+    <div class="sidebar">
+        <ul>
+            <li>
+                <div class="Logo">
+                    <img src="./Asset/logo.png" alt="" width="203" height="72">
+                    <button onclick=toggleSidebar() id="toggle-btn">
+                        <i class='bx bx-menu' ></i>
+                    </button>
+                </div>
+            </li>
+            <li>
+                <a href="index.html">
+                    <i class='bx bxs-dashboard' ></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="user.html">
+                    <i class='bx bx-user' ></i>
+                    <span>User</span>
+                </a>
+            </li>
+            <li>
+                <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+                    <i class='bx bx-taxi' ></i>
+                    <span>Trip Management</span>
+                    <i class='bx bx-chevron-right' ></i>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="upcomingtrips.html">Upcoming Trips</a></li>
+                        <li class="active"><a href="triphistory.html">Tips history</a></li>
+                        <li><a href="trips.html">Trips</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <a href="communication.html">
+                    <i class='bx bx-chat' ></i>
+                    <span>Communication</span>
+                </a>
+            </li>
+            <li>
+                <a href="facility.html">
+                    <i class='bx bxs-car-garage' ></i>
+                    <span>Facility</span>
+                </a>
+            </li>
+            <li>
+                <a href="document.html">
+                    <i class='bx bx-folder-open' ></i>
+                    <span>Document</span>
+                </a>
+            </li>
+            <li>
+                <a href="legal.html">
+                    <i class='bx bx-file' ></i>
+                    <span>Legal Compliance</span>
+                </a>
+            </li>
+            <li>
+                <a href="contract.html">
+                    <i class='bx bxs-edit' ></i>
+                    <span>Contract</span>
+                </a>
+            </li>
+            <li>
+                <a href="security.html">
+                    <i class='bx bx-shield' ></i>
+                    <span>Security</span>
+                </a>
+            </li>
+            <li>
+                <a href="maintenance.html">
+                    <i class='bx bx-sitemap' ></i>
+                    <span>Maintenance</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <nav>
+            <div class="leftbar">
+                <button>
+                    <i class='bx bx-home-alt-2'></i>
+                </button>
+                <a href="index.html">
+                    <span>Home</span>
+                </a>
+                <i class='bx bx-chevron-right'></i>
+                <span>Trips</span>
+                <i class='bx bx-chevron-right'></i>
+                <span>Trip History</span>
+            </div>
+            <div class="rightbar">
+                <div class="search-container">
+                    <input type="search" name="" id="" placeholder="Search for something">
+                </div>
+                <div class="setting-container">
+                    <a href="#"><i class='bx bx-cog' ></i></a>
+                </div>
+                <div class="notification-container">
+                    <a href="#"><i class='bx bxs-bell' ></i></a>
+                </div>
+                <div class="profile-container">
+                    <a href="#"><i class='bx bx-user-circle' ></i></a>
+                </div>
+            </div>
+        </nav>
+        <div class="triphistory-container">
+            <div class="history-box">
+                <div class="top-box">
+                    <h3>Trips History</h3>
+                    <!-- <a href="crud-trips_history.html"><button>Add</button></a> -->
+                </div>
+                <div class="bottom-box">
+                    <form class="create-form">
+                        <input type="text" class="driver" placeholder="Driver"/>
+                        <input type="text" class="client" placeholder="Client"/>
+                        <input type="text" class="email" placeholder="Email"/>
+                        <input type="text" class="from" placeholder="From"/>
+                        <input type="text" class="to" placeholder="To"/>
+                        <input type="text" class="hours" placeholder="Hours Trip"/>
+                        <input type="text" class="amount" placeholder="Amount"/>
+                        <input type="text" class="tip" placeholder="Tip"/>
+                        <input type="text" class="status" placeholder="Action"/>
+                        <button type="button" onclick="add()">Create</button>
+                    </form>
+                    <form class="update-form">
+                        <input type="text" hidden class="id" />
+                        <input type="text" class="udriver" placeholder="Driver"/>
+                        <input type="text" class="uclient" placeholder="Client"/>
+                        <input type="text" class="uemail" placeholder="Email"/>
+                        <input type="text" class="ufrom" placeholder="From"/>
+                        <input type="text" class="uto" placeholder="To"/>
+                        <input type="text" class="uhours" placeholder="Hours Trip"/>
+                        <input type="text" class="uamount" placeholder="Amount"/>
+                        <input type="text" class="utip" placeholder="Tip"/>
+                        <input type="text" class="ustatus" placeholder="Action"/>
+                        <button type="button" onclick="update()">update</button>
+                    </form>
+                    <div class="add-div">
+                        <button onclick="create()">Add +</button>
+                    </div>
+                    <table>
+                        <thead>
+                            <th>driver</th>
+                            <th>client</th>
+                            <th>email</th>
+                            <th>from</th>
+                            <th>to</th>
+                            <th>hours</th>
+                            <th>amount</th>
+                            <th>tip</th>
+                            <th>status</th>
+                        </thead>
+                        <tbody class="data_table">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js">
+        /*Dito using getItem kukunin ko yung key na ginamit ko na 
+        lagayan ng value ng mga input na nilagay ko sa  "localStorage"*/
+
+        // const driver = localStorage.getItem('driver-name');
+        // const client = localStorage.getItem('client-name');
+        // const email = localStorage.getItem('email-name');
+        // const from = localStorage.getItem('from-name');
+        // const to = localStorage.getItem('to-name');
+        // const hours = localStorage.getItem('hours-name');
+        // const amount = localStorage.getItem('amount-name');
+        // const tip = localStorage.getItem('tip-name');
+        // const status = localStorage.getItem('status-name');
+
+        /*so dito  gumamit ako ng script textContent na meron nang value mula sa "localStorage" upang gamitin para ma 
+        ishow ko sa website yung value na na-store ko sa "localStorage"*/
+
+        // document.getElementById('driver-name').textContent = driver;
+        // document.getElementById('client-name').textContent = client;
+        // document.getElementById('email-name').textContent = email;
+        // document.getElementById('from-name').textContent = from;
+        // document.getElementById('to-name').textContent = to;
+        // document.getElementById('hours-name').textContent = hours;
+        // document.getElementById('amount-name').textContent = amount;
+        // document.getElementById('tip-name').textContent = tip;
+        // document.getElementById('status-name').textContent = status;
+    </script>
+</body>
+</html>

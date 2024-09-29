@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin.Movers.com</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <script type="text/javascript" src="app.js" defer></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li>
+                <div class="Logo">
+                    <img src="./Asset/logo.png" alt="" width="203" height="72">
+                    <button onclick=toggleSidebar() id="toggle-btn">
+                        <i class='bx bx-menu' ></i>
+                    </button>
+                </div>
+            </li>
+            <li>
+                <a href="index.html">
+                    <i class='bx bxs-dashboard' ></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="user.html">
+                    <i class='bx bx-user' ></i>
+                    <span>User</span>
+                </a>
+            </li>
+            <li>
+                <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+                    <i class='bx bx-taxi' ></i>
+                    <span>Trip Management</span>
+                    <i class='bx bx-chevron-right' ></i>
+                </button>
+                <ul class="sub-menu">
+                    <div>
+                        <li><a href="upcomingtrips.html">Upcoming Trips</a></li>
+                        <li><a href="triphistory.html">Tips history</a></li>
+                        <li><a href="trips.html">Trips</a></li>
+                    </div>
+                </ul>
+            </li>
+            <li>
+                <a href="communication.html">
+                    <i class='bx bx-chat' ></i>
+                    <span>Communication</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="facility.html">
+                    <i class='bx bxs-car-garage' ></i>
+                    <span>Facility</span>
+                </a>
+            </li>
+            <li>
+                <a href="document.html">
+                    <i class='bx bx-folder-open' ></i>
+                    <span>Document</span>
+                </a>
+            </li>
+            <li>
+                <a href="legal.html">
+                    <i class='bx bx-file' ></i>
+                    <span>Legal Compliance</span>
+                </a>
+            </li>
+            <li>
+                <a href="contract.html">
+                    <i class='bx bxs-edit' ></i>
+                    <span>Contract</span>
+                </a>
+            </li>
+            <li>
+                <a href="security.html">
+                    <i class='bx bx-shield' ></i>
+                    <span>Security</span>
+                </a>
+            </li>
+            <li>
+                <a href="maintenance.html">
+                    <i class='bx bx-sitemap' ></i>
+                    <span>Maintenance</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <nav>
+            <div class="leftbar">
+                <button>
+                    <i class='bx bx-home-alt-2'></i>
+                </button>
+                <a href="index.html">
+                    <span>Home</span>
+                </a>
+                <i class='bx bx-chevron-right'></i>
+                <span>Facility</span>
+            </div>
+            <div class="rightbar">
+                <div class="search-container">
+                    <input type="search" name="" id="" placeholder="Search for something">
+                </div>
+                <div class="setting-container">
+                    <a href="#"><i class='bx bx-cog' ></i></a>
+                </div>
+                <div class="notification-container">
+                    <a href="#"><i class='bx bxs-bell' ></i></a>
+                </div>
+                <div class="profile-container">
+                    <a href="#"><i class='bx bx-user-circle' ></i></a>
+                </div>
+            </div>
+        </nav>
+        <div class="facility-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d103854.7784897599!2d121.04382512965775!3d14.682803581659922!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1726932879740!5m2!1sen!2sph" width="1095" height="540" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</body>
+</html>
