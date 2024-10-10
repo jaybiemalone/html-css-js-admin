@@ -12,12 +12,20 @@ function toggleSubMenu(button){
 
 let data = [
     {id: 1, driver:"sigma", client:"sigbin",email:"sigbin@gmail.com",from:"bukid",to:"quezon",hours:"4hrs",amount:"2500",tip:"20",status:"pending"},
-    {id: 2, driver:"salsalani", client:"sinalin",email:"sinalin@gmail.com",from:"manila",to:"dubay",hours:"5days",amount:"3500",tip:"20",status:"pending"},
-    {id: 3, driver:"wally", client:"bold",email:"bold-ni-wally@gmail.com",from:"manila",to:"GMA",hours:"3hrs",amount:"3500",tip:"150",status:"accepted"},
-    {id: 4, driver:"vic-soto", client:"ryza",email:"dumilim@gmail.com",from:"luzon",to:"GMA",hours:"3hrs",amount:"3500",tip:"200",status:"accepted"}
 ]
 
+window.onload = function() {
+    var object = localStorage.getItem('object');
+    if (object) {
+        data = JSON.parse(object); // If there's data in localStorage, load it
+    } else {
+        data = []; // Initialize empty array if no data exists
+    }
+    readALL(); // Call readALL to populate the table
+}
+
 function readALL(){
+    // Save current data array to localStorage
     localStorage.setItem("object", JSON.stringify(data));
     var tabledata = document.querySelector(".data_table");
 
@@ -37,8 +45,8 @@ function readALL(){
         <td>${record.tip}</td>
         <td>${record.status}</td>
         <td>
-            <button class="edit" onclick={edit(${record.id})}>Edit</button>
-            <button class="delete" onclick={delet(${record.id})}>Delete</button>
+            <button class="edit" onclick="edit(${record.id})">Edit</button>
+            <button class="delete" onclick="delet(${record.id})">Delete</button>
         </td>
         </tr>`
     ))
@@ -47,8 +55,9 @@ function readALL(){
 }
 
 function delet(id){
-    data.splice(id, 1);
-    readALL();
+    var index = data.findIndex(rec => rec.id === id);
+    data.splice(index, 1); // Use index to remove the correct record
+    readALL(); // Update table and localStorage after deletion
 }
 
 function create(){
@@ -67,13 +76,13 @@ function add(){
     var tip = document.querySelector(".tip").value;
     var status = document.querySelector(".status").value;
 
-    var newObj = {id: 5, driver: driver, client: client, email: email, from: from, to: to, hours: hours, amount: amount, tip: tip, status: status};
+    var newObj = {id: data.length ? data[data.length - 1].id + 1 : 1, driver: driver, client: client, email: email, from: from, to: to, hours: hours, amount: amount, tip: tip, status: status};
     data.push(newObj);
 
     document.querySelector(".create-form").style.display = "none";
     document.querySelector(".add-div").style.display = "block";
 
-    readALL();
+    readALL(); // Update table and save to localStorage after adding
 }
 
 function edit(id){
@@ -97,7 +106,7 @@ function update(){
     var client = document.querySelector('.uclient').value;
     var email = document.querySelector('.uemail').value;
     var from = document.querySelector('.ufrom').value;
-    var to = document.querySelector('uto').value;
+    var to = document.querySelector('.uto').value;
     var hours = document.querySelector('.uhours').value;
     var amount = document.querySelector('.uamount').value;
     var tip = document.querySelector('.utip').value;
@@ -106,6 +115,12 @@ function update(){
     var index = data.findIndex(rec => rec.id === id);
     data[index] = {id, driver, client, email, from, to, hours, amount, tip, status};
 
-    document.querySelector('.update-form').style.display = "block";
-    readALL();
+    document.querySelector('.update-form').style.display = "none";
+    document.querySelector('.add-div').style.display = "block";
+    readALL(); // Update table and save to localStorage after updating
 }
+
+if (localStorage.getItem('submit') === null){
+    localStorage.setItem('submit', JSON.stringify([]));
+}
+

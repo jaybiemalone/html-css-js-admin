@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin.Movers.com</title>
+    <title>Movers.com</title>
+    <link rel="icon" href="/Asset/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./style/index.css">
+    <script type="text/javascript" src="app.js" defer></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body onload="readALL()">
@@ -12,9 +14,8 @@
         <ul>
             <li>
                 <div class="Logo">
-                    <img src="./Asset/logo.png" alt="" width="203" height="72">
+                    <img src="./Asset/logo.png" alt="" width="180" height="62">
                     <button onclick=toggleSidebar() id="toggle-btn">
-                        <i class='bx bx-menu' ></i>
                     </button>
                 </div>
             </li>
@@ -172,32 +173,5 @@
             </div>
         </div>
     </div>
-    <script src="./app.js">
-        /*Dito using getItem kukunin ko yung key na ginamit ko na 
-        lagayan ng value ng mga input na nilagay ko sa  "localStorage"*/
-
-        // const driver = localStorage.getItem('driver-name');
-        // const client = localStorage.getItem('client-name');
-        // const email = localStorage.getItem('email-name');
-        // const from = localStorage.getItem('from-name');
-        // const to = localStorage.getItem('to-name');
-        // const hours = localStorage.getItem('hours-name');
-        // const amount = localStorage.getItem('amount-name');
-        // const tip = localStorage.getItem('tip-name');
-        // const status = localStorage.getItem('status-name');
-
-        /*so dito  gumamit ako ng script textContent na meron nang value mula sa "localStorage" upang gamitin para ma 
-        ishow ko sa website yung value na na-store ko sa "localStorage"*/
-
-        // document.getElementById('driver-name').textContent = driver;
-        // document.getElementById('client-name').textContent = client;
-        // document.getElementById('email-name').textContent = email;
-        // document.getElementById('from-name').textContent = from;
-        // document.getElementById('to-name').textContent = to;
-        // document.getElementById('hours-name').textContent = hours;
-        // document.getElementById('amount-name').textContent = amount;
-        // document.getElementById('tip-name').textContent = tip;
-        // document.getElementById('status-name').textContent = status;
-    </script>
 </body>
 </html>
