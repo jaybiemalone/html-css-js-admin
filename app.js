@@ -17,15 +17,15 @@ let data = [
 window.onload = function() {
     var object = localStorage.getItem('object');
     if (object) {
-        data = JSON.parse(object); // If there's data in localStorage, load it
+        data = JSON.parse(object); // para lumabas yung data na nilagay sa localstorage
     } else {
-        data = []; // Initialize empty array if no data exists
+        data = []; // if walanamang data, pwedng dun nalang ilagay yung data
     }
-    readALL(); // Call readALL to populate the table
+    readALL(); // Call readALL para malagyan yung mga table ng data
 }
 
 function readALL(){
-    // Save current data array to localStorage
+    // yung mga data na na input masasave ng naka array/mag kakasunod sa localstorage
     localStorage.setItem("object", JSON.stringify(data));
     var tabledata = document.querySelector(".data_table");
 
@@ -56,8 +56,8 @@ function readALL(){
 
 function delet(id){
     var index = data.findIndex(rec => rec.id === id);
-    data.splice(index, 1); // Use index to remove the correct record
-    readALL(); // Update table and localStorage after deletion
+    data.splice(index, 1); // delete function sa mga data sa localstorage na nasa table
+    readALL(); // para basahin na walana talaga yung table na nadelete
 }
 
 function create(){
