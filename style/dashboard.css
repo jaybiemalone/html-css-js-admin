@@ -205,3 +205,23 @@
     font-size: 10px;
     padding-left: 20px;
 }
+
+
+@media  only screen and (max-width: 942px){
+    .main-content .dashboard-content .box:nth-child(4){
+        overflow: hidden;
+        width: 300px;
+    }
+    .main-content .dashboard-content .box:nth-child(4) .first-box{
+        display: none;
+    }
+    .main-content .dashboard-content .box:nth-child(4) .first-box .trip{
+        display: none;
+    }
+    .main-content .dashboard-content .box:nth-child(4) .second-box .right-box{
+        display: none;
+    }
+    .main-content .dashboard-content .box:nth-child(4) .second-box .left-box{
+        display: none;
+    }
+}
