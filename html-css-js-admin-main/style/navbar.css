@@ -7,6 +7,10 @@
     position: relative;
 }
 
+.main-content nav .logo-nav-container{
+    display: none;
+}
+
 .main-content nav .leftbar{
     width: 50%;
     display: flex;
@@ -102,4 +106,22 @@ a{
     color: rgb(255, 0, 0);
 }
 
+@media  only screen and (max-width: 942px){
+    .main-content nav .leftbar,
+    .main-content nav .rightbar{
+        display: none;
+    }
+}
 
+@media  only screen and (max-width: 568px){
+    .main-content nav .logo-nav-container{
+        display: flex;
+        margin-left: 30px;
+        margin-top: 5px;
+    }
+
+    .main-content nav .leftbar,
+    .main-content nav .rightbar{
+        display: none;
+    }
+}
