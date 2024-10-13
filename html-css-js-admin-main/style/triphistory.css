@@ -1,0 +1,109 @@
+.main-content .triphistory-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content .triphistory-container .history-box{
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    width: 1050px;
+    height: 500px;
+    background-color: white;
+}
+
+.main-content .triphistory-container .history-box .top-box{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.288);
+    color: black;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    justify-content: space-between;
+}
+
+.main-content .triphistory-container .history-box .bottom-box{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    color: black;
+    position: relative;
+}
+.main-content .triphistory-container .history-box .bottom-box form{
+    padding: 15px;
+}
+
+.main-content .triphistory-container .history-box .bottom-box form input{
+    border: none;
+    background-color: rgba(243, 241, 241, 0.596);
+    border-radius: 5px;
+    height: 30px;
+    width: 180px;
+    margin: 5px;
+    outline: none;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.main-content .triphistory-container .history-box .bottom-box form button{
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #0046FA;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.main-content .triphistory-container .history-box .bottom-box form button:hover{
+    opacity: 50%;
+}
+
+.main-content .triphistory-container .history-box .bottom-box .add-div button{
+    margin-top: 10px;
+    margin-left: 20px;
+    background-color: #0046FA;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 1000px;
+    border: none;
+    cursor: pointer;
+}
+
+.main-content .triphistory-container .history-box .bottom-box .add-div button:hover{
+    opacity: 50%;
+}
+
+.create-form, .update-form{
+    display: none;
+}
+
+.main-content .triphistory-container .history-box .bottom-box table{
+    margin-top: 10px;
+    color: black;
+    text-align: center;
+}
+
+table .edit{
+    background-color: #0046FA;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 1000px;
+    border: none;
+    cursor: pointer;
+}
+
+table .delete{
+    background-color: rgb(252, 97, 97);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 1000px;
+    border: none;
+    cursor: pointer;
+}
+
+table .edit:hover,
+table .delete:hover{
+    opacity: 50%;
+}
