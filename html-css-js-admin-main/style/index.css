@@ -30,4 +30,6 @@ body{
 
     overflow: auto;
 }
-
+.main-content::-webkit-scrollbar{
+    display: none;
+}

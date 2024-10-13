@@ -12,6 +12,10 @@
     transition: 300ms ease-in-out;
 }
 
+.sidebar::-webkit-scrollbar{
+    display: none;
+}
+
 .sidebar.close{
     padding: 5px;
     width: 60px;
