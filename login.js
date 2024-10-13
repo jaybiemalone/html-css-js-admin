@@ -33,12 +33,11 @@ submit.addEventListener("click", function (event) {
       .then((userCredential) => {
         // Signed up 
         const user = userCredential.user;
-        alert("Account Login");
         window.location.href ="dashbord.html";
       })
       .catch((error) => {
         // Handle errors here
         const errorMessage = error.message;
-        alert("Error: " + errorMessage);
+        alert("Wrong Password");
       });
 });
