@@ -4,6 +4,8 @@
     padding: 5px 1em;
     border-right: 1px solid rgb(233, 230, 230);
 
+    overflow: auto;
+
     position: sticky;
     top: 0;
     align-self: start;
@@ -100,4 +102,17 @@
 
 .sidebar .Logo #toggle-btn i{
     font-size: 20px;
+}
+
+@media  only screen and (max-width: 568px){
+    .sidebar{
+        display: none;
+    }
+    .main-content{
+        width: 100vw;
+    }
+
+    .main-content .dashboard-content .box{
+        margin-left: 60px;
+    }
 }
