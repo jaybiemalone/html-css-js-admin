@@ -7,6 +7,44 @@
     position: relative;
 }
 
+.main-content nav .log-out{
+    box-sizing: border-box;
+    width: 100px;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    color: black;
+    font-weight: bold;
+}
+
+.main-content nav .log-out i{
+    flex-shrink: 0;
+    font-size: 40px;
+    background: white;
+    padding-left: 40px;
+    cursor: pointer;
+}
+.main-content nav .log-out #toggleBtn{
+    border: none;
+}
+
+.main-content nav .log-out #logout{
+    background: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.main-content nav .log-out #logout a{
+    color: black;
+}
+
+.hidden{
+    display: none;
+    padding-left: 15px;
+}
+
 .main-content nav .logo-nav-container{
     display: none;
 }
@@ -64,48 +102,6 @@ a{
     padding-right: 10px;
 }
 
-/* Profile Side*/
-
-.main-content nav .rightbar{
-    display: flex;
-    align-items: center;
-    justify-content: end;
-}
-
-.main-content nav .rightbar i{
-    color: black;
-    font-size: 25px;
-    width: 50px;
-}
-
-.main-content nav .rightbar .search-container{
-    padding-right: 20px;
-}
-
-.main-content nav .rightbar .search-container input{
-    border: none;
-    background-color: #EDEDED;
-    border-radius: 10px;
-    width: 239px;
-    height: 36px;
-    text-align: center;
-    outline: none;
-    color: rgb(126, 124, 121);
-}
-
-.main-content nav .rightbar .setting-container i,
-.main-content nav .rightbar .notification-container i,
-.main-content nav .rightbar .profile-container i{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-.main-content nav .rightbar  .notification-container i{
-    color: rgb(255, 0, 0);
-}
-
 @media  only screen and (max-width: 942px){
     .main-content nav .leftbar,
     .main-content nav .rightbar{
@@ -120,8 +116,7 @@ a{
         margin-top: 5px;
     }
 
-    .main-content nav .leftbar,
-    .main-content nav .rightbar{
+    .main-content nav .leftbar{
         display: none;
     }
 }
