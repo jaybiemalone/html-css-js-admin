@@ -31,9 +31,13 @@
 .main-content nav .log-out #logout{
     background: white;
     width: 80px;
-    height: 30px;
+    height: 35px;
     border-radius: 10px;
     padding-left: 10px;
+}
+
+.main-content nav .log-out #logout p:hover{
+    opacity: 70%;
 }
 
 .main-content nav .log-out #logout a{
@@ -110,6 +114,7 @@ a{
 }
 
 @media  only screen and (max-width: 568px){
+
     .main-content nav .logo-nav-container{
         display: flex;
         margin-left: 30px;

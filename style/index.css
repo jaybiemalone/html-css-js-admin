@@ -7,6 +7,7 @@
 @import url(triphistory.css);
 @import url(crud-trips_history.css);
 @import url(login.css);
+@import url(legal.css);
 
 *{
     padding: 0;

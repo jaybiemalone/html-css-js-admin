@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="./style/index.css">
     <script type="text/javascript" src="app.js" defer></script>
     <script type="text/javascript" src="click.js" defer></script>
+    <script type="text/javascript" src="sidebar.js" defer></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="sidebar">
+    <div class="sidebar" id="show">
         <ul>
             <li>
                 <div class="Logo">
@@ -108,7 +109,8 @@
             <div class="log-out">
                 <button id="toggleBtn"><i class='bx bx-cog' ></i></button>
                 <div id="logout" class="hidden">
-                    <p><a href="index.html">Log out</a></p>
+                    <p style="padding-top: 5px;"><a href="index.html">Log out</a></p>
+                    <p style="padding-top: 5px;"><button id="togglesidebtn" style="display: none;">SideBar</button></p>
                 </div>
             </div>
         </nav>

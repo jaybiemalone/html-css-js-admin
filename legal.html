@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <script type="text/javascript" src="click.js" defer></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
     <div class="sidebar">
         <ul>
@@ -22,21 +24,21 @@
             </li>
             <li>
                 <a href="dashbord.html">
-                    <i class='bx bxs-dashboard' ></i>
+                    <i class='bx bxs-dashboard'></i>
                     <span>Dashboard</span>
                 </a>
             </li>
             <li>
                 <a href="user.html">
-                    <i class='bx bx-user' ></i>
+                    <i class='bx bx-user'></i>
                     <span>User</span>
                 </a>
             </li>
             <li>
                 <button onclick="toggleSubMenu(this)" class="dropdown-btn">
-                    <i class='bx bx-taxi' ></i>
+                    <i class='bx bx-taxi'></i>
                     <span>Trip Management</span>
-                    <i class='bx bx-chevron-right' ></i>
+                    <i class='bx bx-chevron-right'></i>
                 </button>
                 <ul class="sub-menu">
                     <div>
@@ -48,43 +50,43 @@
             </li>
             <li>
                 <a href="communication.html">
-                    <i class='bx bx-chat' ></i>
+                    <i class='bx bx-chat'></i>
                     <span>Communication</span>
                 </a>
             </li>
             <li>
                 <a href="facility.html">
-                    <i class='bx bxs-car-garage' ></i>
+                    <i class='bx bxs-car-garage'></i>
                     <span>Facility</span>
                 </a>
             </li>
             <li>
                 <a href="document.html">
-                    <i class='bx bx-folder-open' ></i>
+                    <i class='bx bx-folder-open'></i>
                     <span>Document</span>
                 </a>
             </li>
             <li class="active">
                 <a href="legal.html">
-                    <i class='bx bx-file' ></i>
+                    <i class='bx bx-file'></i>
                     <span>Legal Compliance</span>
                 </a>
             </li>
             <li>
                 <a href="contract.html">
-                    <i class='bx bxs-edit' ></i>
+                    <i class='bx bxs-edit'></i>
                     <span>Contract</span>
                 </a>
             </li>
             <li>
                 <a href="security.html">
-                    <i class='bx bx-shield' ></i>
+                    <i class='bx bx-shield'></i>
                     <span>Security</span>
                 </a>
             </li>
             <li>
                 <a href="maintenance.html">
-                    <i class='bx bx-sitemap' ></i>
+                    <i class='bx bx-sitemap'></i>
                     <span>Maintenance</span>
                 </a>
             </li>
@@ -103,12 +105,46 @@
                 <span>Legal Compliance</span>
             </div>
             <div class="log-out">
-                <button id="toggleBtn"><i class='bx bx-cog' ></i></button>
+                <button id="toggleBtn"><i class='bx bx-cog'></i></button>
                 <div id="logout" class="hidden">
                     <p><a href="index.html">Log out</a></p>
                 </div>
             </div>
         </nav>
+        <div class="legal-main-content">
+            <div class="legal-container">
+                <div class="legal-box">
+                    <div class="legal-boxbox1"></div>
+                    <div class="legal-boxbox2">
+                        <div class="complience-box">
+                            <a href="#">
+                                <i class='bx bxs-user' style='color:#fff8f8' ></i>
+                                <h4>My Control</h4>
+                            </a>
+                        </div>
+                        <div class="complience-box">
+                            <a href="#">
+                                <i class='bx bx-file' style='color:#fff8f8'  ></i>
+                                <h4>Monitoring</h4>
+                            </a>
+                        </div>
+                        <div class="complience-box">
+                            <a href="#">
+                                <i class='bx bx-file' style='color:#fff8f8'  ></i>
+                                <h4>Policies</h4>
+                            </a>
+                        </div>
+                        <div class="complience-box">
+                            <a href="#">
+                                <i class='bx bx-file' style='color:#fff8f8'  ></i>
+                                <h4>Indicators Tracker</h4>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
