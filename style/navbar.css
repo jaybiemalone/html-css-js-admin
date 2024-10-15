@@ -113,15 +113,52 @@ a{
     }
 }
 
-@media  only screen and (max-width: 568px){
+@media  only screen and (max-width: 660px){
+    .main-content nav{
+        z-index: 1;
+        position: fixed;
+        width: 100%;
+        border: none;
+    }
+    .display-menu button{
+        z-index: 1;
+        display: block !important;
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        position: absolute;
+        bottom: 5px;
+        width: 50px;
+        float: right;
+        left: 20px;
+    }
 
     .main-content nav .logo-nav-container{
         display: flex;
         margin-left: 30px;
         margin-top: 5px;
     }
-
-    .main-content nav .leftbar{
+    .sidebar{
         display: none;
+    }
+    .main-content{
+        width: 100vw;
+    }
+}
+
+@media  only screen and (max-width: 568px){
+    .main-content nav{
+        width: 100vw;
+    }
+}
+
+@media  only screen and (max-width: 375px){
+    .sidebar ul li .Logo{
+        display: none;
+    }
+
+    .sidebar{
+        padding-top: 80px;
     }
 }

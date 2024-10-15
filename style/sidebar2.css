@@ -1,4 +1,4 @@
-.sidebar{
+.sidebar2{
     box-sizing: border-box;
     height: 100vh;
     padding: 5px 1em;
@@ -12,28 +12,28 @@
     transition: 300ms ease-in-out;
 }
 
-.sidebar::-webkit-scrollbar{
+.sidebar2::-webkit-scrollbar{
     display: none;
 }
 
-.sidebar ul{
+.sidebar2 ul{
     list-style: none;
 }
 
-.sidebar > ul > li:first-child{
+.sidebar2 > ul > li:first-child{
     display: flex;
     justify-content: flex-end;
     margin-bottom: 16px;
 }
 
-.sidebar ul li.active a{
+.sidebar2 ul li.active a{
     color: rgb(30, 78, 139);
     i{
         fill: rgb(30, 78, 139);
     }
 }
 
-.sidebar a, .sidebar .dropdown-btn{
+.sidebar2 a, .sidebar2 .dropdown-btn{
     border-radius: .5em;
     padding: .85em;
     text-decoration: none;
@@ -52,15 +52,15 @@
     border: none;
 }
 
-.sidebar a span, .sidebar .dropdown-btn span{
+.sidebar2 a span, .sidebar2 .dropdown-btn span{
     flex-grow: 1;
 }
 
-.sidebar a:hover, .sidebar .dropdown-btn:hover{
+.sidebar2 a:hover, .sidebar2 .dropdown-btn:hover{
     background-color: rgba(105, 98, 98, 0.336);
 }
 
-.sidebar .sub-menu{
+.sidebar2 .sub-menu{
     display: grid;
     grid-template-rows: 0fr;
     transition: 300ms ease-in-out;
@@ -70,7 +70,7 @@
     }
 }
 
-.sidebar .sub-menu.show{
+.sidebar2 .sub-menu.show{
     grid-template-rows: 1fr;
 }
 
@@ -82,11 +82,11 @@
     rotate: 90deg;
 }
 
-.sidebar .sub-menu{
+.sidebar2 .sub-menu{
     padding-left: 2em;
 }
 
-.sidebar ul li .Logo{
+.sidebar2 ul li .Logo{
     position: relative;
     left: -20px;
 }
@@ -99,7 +99,7 @@
     cursor: pointer;
 }
 
-.sidebar .Logo #toggle-btn i{
+.sidebar2 .Logo #toggle-btn i{
     font-size: 20px;
 }
 
@@ -108,11 +108,11 @@
         width: 100vw;
     }
 
-    .sidebar ul{
+    .sidebar2 ul{
         line-height: 10px;
     }
 
-    .sidebar ul li{
+    .sidebar2 ul li{
         display: block;
         border-radius: 10px;
         width: 80%;
@@ -120,16 +120,26 @@
         margin-bottom: 10px;
     }
 
-    .sidebar .Logo img{
+    .sidebar2{
+        z-index: 1;
+        background-color: white;
+        position: absolute;
+        display: block !important;
+        width: 100%;
+        padding-top: 50px;
+        padding-left: 130px;
+    }
+
+    .sidebar2 .Logo img{
         display: none;
     }
-    .sidebar li:nth-child(1){
+    .sidebar2 li:nth-child(1){
         background: none;
     }
 }
 
 @media  only screen and (max-width: 475px){
-    .sidebar{
+    .sidebar2{
         padding-left: 60px;
     }
 }
